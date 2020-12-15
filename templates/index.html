@@ -1,12 +1,23 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<div class="container">
-    {% block page_content %}
-        <h1 class="h1">Welcome to VHSVault</h1>
-        <p class="p-1">Page is under construction.</p>
-    {% endblock %}
-</div>
+{% block header %}
+<!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="https://cdn.trendhunterstatic.com/phpthumbnails/123/123141/123141_1_800.jpeg" alt="" />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">VHS Vault</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">The Hub to Digitize and Host VHS Video</p>
+            </div>
+        </header>
 {% endblock %}
 
 
