@@ -21,40 +21,13 @@
 {% endblock %}
 
 {% block videos %}
-    <!-- Videos Section-->
-    <section class="page-section portfolio" id="videos">
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="videos">
         <div class="container">
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Check out The Walters Family</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- Portfolio Grid Items-->
-            <div class="row justify-content-center">
-                <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/afaZnm7KS2I?start=4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                </div>
-                <!-- Video Item 2 Walters Wentz Christmas 1989-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oUJm6TAblQY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
-                </div>
-                <!-- Video Item 3 World's Scary Police Chases Chris-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4IU_AbuQltA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">
+                <a class="text-white" href="{{ url_for('video') }}">Click here to see videos</a>
+            </h2>
         </div>
     </section>
 {% endblock %}

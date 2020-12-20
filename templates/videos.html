@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+{% include 'head.html' %}
+
+<h3 class="h3"><a href="{{ url_for('index') }}">Back</a></h3>
+<body>
+    <!-- Videos Section-->
+    <section class="container">
+            <!-- Portfolio Section Heading-->
+         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Check out The Walters Family</h2>
+         <!-- Icon Divider-->
+         <div class="divider-custom">
+             <div class="divider-custom-line"></div>
+             <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
+             <div class="divider-custom-line"></div>
+         </div>
+
+
+         <!-- Video Items-->
+        <div class="row justify-content-center">
+             <!-- VHSVault Youtube Videos, dynamically displayed-->
+            {% for video_id in video_ids %}
+             <div class="col-md-6 col-lg-4 mb-5">
+                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                     <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div>
+             </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+{% include 'bootstrapcorejs.html' %}
+
+</body>
+
+</html>
