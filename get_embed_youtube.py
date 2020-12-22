@@ -1,8 +1,9 @@
 from googleapiclient.discovery import build
+import os
 
-api_key = 'AIzaSyAVYW6lTK4vX324BV3woS_HqNpLHpf_p2A'
+
+api_key = os.environ.get('YT_API_KEY')
 youtube = build('youtube', 'v3', developerKey=api_key)
-
 
 yt_channel_request = youtube.channels().list(
     part='contentDetails',
