@@ -2,6 +2,7 @@ from flask import Flask, render_template
 import get_embed_youtube
 
 app = Flask(__name__)
+app.jinja_env.globals.update(zip=zip)
 
 
 @app.route('/')
@@ -11,7 +12,7 @@ def index():
 
 @app.route('/videos')
 def video():
-    return render_template('videos.html', video_ids=get_embed_youtube.video_ids)
+    return render_template('videos.html', video_ids=get_embed_youtube.video_ids, video_titles=get_embed_youtube.video_titles)
 
 
 """
@@ -22,4 +23,4 @@ def user(name):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

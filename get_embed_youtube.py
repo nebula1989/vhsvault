@@ -1,6 +1,10 @@
 from googleapiclient.discovery import build
 import os
 
+import urllib.request
+import json
+import urllib
+
 
 api_key = os.environ.get('YT_API_KEY')
 youtube = build('youtube', 'v3', developerKey=api_key)
@@ -14,6 +18,7 @@ yt_channel = yt_channel_request.execute()
 uploads_id = yt_channel['items'][0]['contentDetails']['relatedPlaylists']['uploads']
 
 video_ids = []
+video_titles = []
 next_page_token = ''
 
 while next_page_token is not None:
@@ -31,3 +36,15 @@ while next_page_token is not None:
         next_page_token = yt_uploads['nextPageToken']
     except:
         next_page_token = None
+
+
+for video_id in video_ids:
+    params = {"format": "json", "url": "https://www.youtube.com/watch?v=%s" % video_id}
+    url = "https://www.youtube.com/oembed"
+    query_string = urllib.parse.urlencode(params)
+    url = url + "?" + query_string
+
+    with urllib.request.urlopen(url) as response:
+        response_text = response.read()
+        data = json.loads(response_text.decode())
+        video_titles.append(data['title'])
