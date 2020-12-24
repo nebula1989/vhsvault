@@ -1,8 +1,8 @@
 from flask import Flask, render_template
 import get_embed_youtube
 
+
 app = Flask(__name__)
-app.jinja_env.globals.update(zip=zip)
 
 
 @app.route('/')

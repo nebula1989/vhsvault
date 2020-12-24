@@ -1,8 +1,5 @@
 from googleapiclient.discovery import build
 import os
-
-import urllib.request
-import json
 import urllib
 
 
@@ -37,14 +34,3 @@ while next_page_token is not None:
     except:
         next_page_token = None
 
-
-for video_id in video_ids:
-    params = {"format": "json", "url": "https://www.youtube.com/watch?v=%s" % video_id}
-    url = "https://www.youtube.com/oembed"
-    query_string = urllib.parse.urlencode(params)
-    url = url + "?" + query_string
-
-    with urllib.request.urlopen(url) as response:
-        response_text = response.read()
-        data = json.loads(response_text.decode())
-        video_titles.append(data['title'])

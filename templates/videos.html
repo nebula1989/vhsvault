@@ -5,7 +5,6 @@
 
 <h3 class="h3" style="padding: 3%"><a href="{{ url_for('index') }}">Go Back Home</a></h3>
 <body>
-<p class="p-1">Until a search features is built, Use this workaround to find specific videos: "CTRL + F", enter a word, then press enter</p>
     <!-- Videos Section-->
     <section class="container">
             <!-- Portfolio Section Heading-->
@@ -21,9 +20,8 @@
          <!-- Video Items-->
         <div class="row justify-content-center">
              <!-- VHSVault Youtube Videos, dynamically displayed-->
-            {% for video_id, video_title in zip(video_ids, video_titles) %}
+            {% for video_id in video_ids %}
                  <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-modal-title">{{ video_title }}</div>
                      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                      </div>
