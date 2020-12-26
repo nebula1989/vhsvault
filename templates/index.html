@@ -21,18 +21,14 @@
 {% endblock %}
 
 {% block videos %}
-    <!-- About Section-->
-    <section class="page-section bg-secondary text-white mb-0" id="videos">
-        <div class="container">
-            <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white">
-                <h3 class="p-1" >Featured Video</h3>
+     <!--Featured Video -->
+        <div class="row justify-content-center">
+        <h3 class="p-1" >Featured Video</h3>
+             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/oZaVrqrkeBM?start=86" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h1 class="h2"><a class="text-white" href="{{ url_for('video') }}">Click Here to See More Videos</a></h1>
-            </h2>
-
+             </div>
+            <h3 class="h3 align-content-center"><a style="color: black" href="{{ url_for('video') }}"><u>Watch More Videos</u></a></h3>
         </div>
-    </section>
 {% endblock %}
 
 {% block paypal %}
