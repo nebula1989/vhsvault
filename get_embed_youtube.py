@@ -19,7 +19,7 @@ next_page_token = ''
 while next_page_token is not None:
     yt_uploads_request = youtube.playlistItems().list(
         part='contentDetails',
-        playlistId=uploads_id,
+        playlistId='PLapw9YE9vAEEMMfVqRLF1ucbsXlyUbYht', # this is the featured playlist, change as necessary
         pageToken=next_page_token,
         maxResults=50
     )
