@@ -1,6 +1,5 @@
 from googleapiclient.discovery import build
 import os
-import urllib
 
 
 api_key = os.environ.get('YT_API_KEY')
@@ -15,7 +14,6 @@ yt_channel = yt_channel_request.execute()
 uploads_id = yt_channel['items'][0]['contentDetails']['relatedPlaylists']['uploads']
 
 video_ids = []
-video_titles = []
 next_page_token = ''
 
 while next_page_token is not None:

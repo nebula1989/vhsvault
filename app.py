@@ -12,7 +12,7 @@ def index():
 
 @app.route('/videos')
 def video():
-    return render_template('videos.html', video_ids=get_embed_youtube.video_ids, video_titles=get_embed_youtube.video_titles)
+    return render_template('videos.html', video_ids=get_embed_youtube.video_ids)
 
 
 """
@@ -23,4 +23,4 @@ def user(name):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
