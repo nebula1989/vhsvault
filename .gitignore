@@ -139,3 +139,5 @@ cython_debug/
 
 # pycharm stuff
 .idea/
+
+YOUR_CLIENT_SECRET_FILE.json

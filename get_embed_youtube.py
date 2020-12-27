@@ -21,7 +21,7 @@ while next_page_token is not None:
         part='contentDetails',
         playlistId='PLapw9YE9vAEEMMfVqRLF1ucbsXlyUbYht', # this is the featured playlist, change as necessary
         pageToken=next_page_token,
-        maxResults=50
+        maxResults=20
     )
     yt_uploads = yt_uploads_request.execute()
     for upload in yt_uploads['items']:
