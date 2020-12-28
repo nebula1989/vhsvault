@@ -141,3 +141,5 @@ cython_debug/
 .idea/
 
 YOUR_CLIENT_SECRET_FILE.json
+
+simple_yt_script.py
