@@ -17,15 +17,32 @@
         </div>
 
 
-         <!-- Video Items-->
+        <!-- playlists display -->
         <div class="row justify-content-center">
-             <!-- VHSVault Youtube Videos, dynamically displayed-->
-            {% for video_id in video_ids %}
-                 <div class="col-md-6 col-lg-4 mb-5">
+            {% for item, playlist in range(playlist_length)|zip(playlist_ids) %}
+                <!-- PLAYLIST TITLE -->
+                <div class="col-md-6 col-lg-4 mb-5">
                      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                         <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                         <h2>{{ playlist_data[item]['snippet']['title'] }}</h2>
                      </div>
                  </div>
+
+
+                <!-- PLAYLIST CONTENT -->
+                 <div class="col-md-6 col-lg-4 mb-5">
+                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                         <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list={{ playlist }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     </div>
+                 </div>
+
+
+                <!-- PLAYLIST DESCRIPTION -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                         <p>{{ playlist_data[item]['snippet']['localized']['description'] }}</p>
+                     </div>
+                 </div>
+
             {% endfor %}
         </div>
 

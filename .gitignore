@@ -143,3 +143,4 @@ cython_debug/
 YOUR_CLIENT_SECRET_FILE.json
 
 simple_yt_script.py
+get_embed_youtube.py
