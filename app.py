@@ -37,7 +37,7 @@ def get_contact():
         subject = request.form["subject"]
         message = request.form["message"]
         send_email(name, email, subject, message)
-        return render_template('contact.html', form=form)
+        return render_template('email_success.html')
     else:
         return render_template('contact.html', form=form)
 
