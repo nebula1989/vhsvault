@@ -20,7 +20,12 @@ def index():
 
 @app.route('/videos')
 def video():
-    return render_template('videos.html', playlist_data=get_yt__playlist_data.yt_playlist_data, playlist_ids=get_yt__playlist_data.yt_playlist_ids, playlist_length=get_yt__playlist_data.amount_of_playlists)
+    return render_template(
+        'videos.html',
+        playlist_data=get_yt__playlist_data.yt_playlist_data,
+        playlist_ids=get_yt__playlist_data.yt_playlist_ids,
+        playlist_length=get_yt__playlist_data.amount_of_playlists
+    )
 
 
 @app.route('/contactus', methods=["GET", "POST"])
